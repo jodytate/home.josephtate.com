@@ -6,7 +6,9 @@
   var repos = [
     'angular/angular.js',
     'twbs/bootstrap',
-    'FortAwesome/Font-Awesome'
+    'FortAwesome/Font-Awesome',
+    'desandro/masonry',
+    'passy/angular-masonry'
   ];
 
   var getTags = function (repo) {
