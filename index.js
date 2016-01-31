@@ -36,7 +36,7 @@
           '</a> using ', verInUse,
           '</li>'].join('');
         document
-          .getElementById('tags')
+          .getElementById('tracking')
           .insertAdjacentHTML('beforeend', html);
 
       }
