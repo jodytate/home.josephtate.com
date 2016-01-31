@@ -3,13 +3,22 @@
 
   var githubReposUrl = 'https://api.github.com/repos/';
 
-  var repos = [
-    'angular/angular.js',
-    'twbs/bootstrap',
-    'FortAwesome/Font-Awesome',
-    'desandro/masonry',
-    'passy/angular-masonry'
-  ];
+  var repos = [{
+      name: 'angular/angular.js',
+      verInUse: '1.5'
+    }, {
+      name: 'twbs/bootstrap',
+      verInUse: '3.3.6'
+    }, {
+      name: 'FortAwesome/Font-Awesome',
+      verInUse: '4.5'
+    }, {
+      name: 'desandro/masonry',
+      verInUse: '4'
+    }, {
+      name: 'passy/angular-masonry',
+      verInUse: '0.14.1'
+    }];
 
   var getTags = function (repo) {
     var xhr = new XMLHttpRequest();
