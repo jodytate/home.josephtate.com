@@ -26,11 +26,14 @@
       if (xhr.readyState === 4) {
 
         var tags = JSON.parse(xhr.response);
-        var latestTag = tags[0].name;
-        var repoName = repo.split('/')[1];
 
-        var html = ['<li><a id="', repoName, '" href="https://github.com/', repo, '">',
+        var latestTag = tags[0].name;
+        var repoName = repo.name.split('/')[1];
+        var verInUse = repo.verInUse;
+
+        var html = ['<li><a id="', repoName, '" href="https://github.com/', repoName, '">',
           repoName, ': ', latestTag,
+          '</a> using ', verInUse,
           '</li>'].join('');
         document
           .getElementById('tags')
@@ -38,7 +41,7 @@
 
       }
     };
-    var requestUrl = githubReposUrl + repo + '/tags';
+    var requestUrl = githubReposUrl + repo.name + '/tags';
     xhr.open('GET', requestUrl, true, 2);
     xhr.send(null);
   };
