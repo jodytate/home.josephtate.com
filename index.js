@@ -7,6 +7,10 @@
       name: 'angular/angular.js',
       verInUse: '1.5'
     }, {
+      name: 'angular/angular',
+      verInUse: 'n/a'
+    },
+     {
       name: 'twbs/bootstrap',
       verInUse: '3.3.6'
     }, {
@@ -31,7 +35,7 @@
         var repoName = repo.name.split('/')[1];
         var verInUse = repo.verInUse;
 
-        var html = ['<li><a id="', repoName, '" href="https://github.com/', repoName, '">',
+        var html = ['<li><a id="', repoName, '" href="https://github.com/', repo.name, '">',
           repoName, ': ', latestTag,
           '</a> using ', verInUse,
           '</li>'].join('');
