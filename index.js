@@ -22,6 +22,9 @@
     }, {
       name: 'passy/angular-masonry',
       verInUse: '0.14.1'
+    }, {
+      name: 'jquery/jquery',
+      verInUse: '2.1.4'
     }];
 
   var getTags = function (repo) {
